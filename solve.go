@@ -4,7 +4,6 @@ import (
 	//"fmt"
 	"unicode"
 	"strings"
-	"fmt"
 )
 
 func RemoveEven(array []int) []int {
@@ -52,8 +51,9 @@ func DifferentWordsCount(s string) int {
 	}
 	return len(dict)
 }
-
+/*
 func main() {
 	fmt.Println(DifferentWordsCount("Hello, w world!HELLO  wOrlD..w.12wd"))
 	// Должно напечатать 2
 }
+*/
