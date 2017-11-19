@@ -4,6 +4,7 @@ import (
 	//"fmt"
 	"unicode"
 	"strings"
+	"fmt"
 )
 
 func RemoveEven(array []int) []int {
@@ -43,22 +44,16 @@ func DifferentWordsCount(s string) int {
 			begin = i
 		}
 	}
+	if flag {
+		_, ok := dict[strings.ToLower(s[begin+1:len(s)])]
+		if !ok {
+			dict[strings.ToLower(s[begin+1:len(s)])] = true
+		}
+	}
 	return len(dict)
 }
-/*
+
 func main() {
-	a := []int{0, 3, 2, 5}
-	b := RemoveEven(a)
-	for i := 0; i < len(b); i++ {
-		fmt.Println(b[i])
-	}
-
-	gen := PowerGenerator(2)
-	fmt.Println(gen()) // Должно напечатать 2
-	fmt.Println(gen()) // Должно напечатать 4
-	fmt.Println(gen()) // Должно напечатать 8
-
-	fmt.Println(DifferentWordsCount("Hello, world!HELLO  wOrlD...12"))
+	fmt.Println(DifferentWordsCount("Hello, w world!HELLO  wOrlD..w.12wd"))
 	// Должно напечатать 2
 }
-*/
